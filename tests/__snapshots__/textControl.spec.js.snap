@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text control behavior testing 1`] = `
+<input
+  onChange={[Function]}
+  type="text"
+  value=""
+/>
+`;
+
+exports[`Text control init value testing 1`] = `
+<input
+  onChange={[Function]}
+  type="text"
+  value="hello"
+/>
+`;
+
+exports[`Text control render testing 1`] = `
+<input
+  onChange={[Function]}
+  type="text"
+  value=""
+/>
+`;
