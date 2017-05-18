@@ -9,7 +9,7 @@ class FormControl extends Component {
     }
 
     handleSubmit() {
-
+        this.props.onSubmit();
     }
 
     render() {
