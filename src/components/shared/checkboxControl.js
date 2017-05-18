@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class CheckboxControl extends React.Component {
+class CheckboxControl extends React.Component {
     constructor(props) {
         super(props);
         this.state = {isChecked: false};
@@ -21,3 +21,5 @@ export default class CheckboxControl extends React.Component {
         )
     }
 }
+
+export default CheckboxControl;

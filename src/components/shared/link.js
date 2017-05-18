@@ -5,7 +5,7 @@ const STATUS = {
   NORMAL: 'normal',
 };
 
-export default class Link extends React.Component {
+class Link extends React.Component {
 
   constructor(props) {
     super(props);
@@ -37,5 +37,6 @@ export default class Link extends React.Component {
       </a>
     );
   }
-
 }
+
+export default Link;

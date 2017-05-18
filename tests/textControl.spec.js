@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import TextControl from '../src/components/shared/textControl';
 import renderer from 'react-test-renderer';
 
-test('Text control render testing', () =>{
+test('Text control render testing', () => {
         const textControl = renderer.create(
             <TextControl />
         );
@@ -13,7 +13,7 @@ test('Text control render testing', () =>{
     }
 );
 
-test('Text control init value testing', () =>{
+test('Text control init value testing', () => {
         const textControl = renderer.create(
             <TextControl value="hello"/>
         );
@@ -23,7 +23,7 @@ test('Text control init value testing', () =>{
     }
 );
 
-test('Text control behavior testing', () =>{
+test('Text control behavior testing', () => {
         const textControl = renderer.create(
             <TextControl />
         );
@@ -33,7 +33,7 @@ test('Text control behavior testing', () =>{
     }
 );
 
-test('Text control behavior testing', () =>{
+test('Text control behavior testing', () => {
         const textControl = shallow(
             <TextControl />
         );

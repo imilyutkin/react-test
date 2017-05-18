@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class TextControl extends React.Component {
+class TextControl extends React.Component {
     constructor(props) {
         super(props);
         this.state = {text: !!this.props.value? this.props.value : ""};
@@ -17,3 +17,5 @@ export default class TextControl extends React.Component {
         )
     }
 }
+
+export default TextControl;
