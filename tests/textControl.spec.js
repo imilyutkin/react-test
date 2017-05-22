@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import TextControl from '../src/components/shared/textControl';
+import TextControl from '../src/components/shared/TextControl';
 import renderer from 'react-test-renderer';
 
 test('Text control render testing', () => {
@@ -8,7 +8,7 @@ test('Text control render testing', () => {
             <TextControl />
         );
 
-        let tree = textControl.toJSON();
+        const tree = textControl.toJSON();
         expect(tree).toMatchSnapshot();
     }
 );
@@ -18,7 +18,7 @@ test('Text control init value testing', () => {
             <TextControl value="hello"/>
         );
 
-        let tree = textControl.toJSON();
+        const tree = textControl.toJSON();
         expect(tree).toMatchSnapshot();
     }
 );
@@ -28,7 +28,7 @@ test('Text control behavior testing', () => {
             <TextControl />
         );
 
-        let tree = textControl.toJSON();
+        const tree = textControl.toJSON();
         expect(tree).toMatchSnapshot();
     }
 );

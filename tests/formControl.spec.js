@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import FormControl from '../src/components/shared/formControl';
+import FormControl from '../src/components/shared/FormControl';
 import renderer from 'react-test-renderer';
 
 test('Form control render testing', () => {
@@ -8,7 +8,7 @@ test('Form control render testing', () => {
             <FormControl />
         );
 
-        let tree = formControl.toJSON();
+        const tree = formControl.toJSON();
         expect(tree).toMatchSnapshot();
     }
 );
@@ -26,11 +26,19 @@ test('Form control render inside', () => {
 
 
 test('Form control submit testing', () => {
-        let onSubmitButtonClick = jest.fn();
+        const onSubmitButtonClick = jest.fn();
         const formControl = shallow(
             <FormControl onSubmit={onSubmitButtonClick} />
         );
-        formControl.find('input').simulate('click')
+        formControl.find('form').simulate('submit')
         expect(onSubmitButtonClick.mock.calls.length).toBe(1);
     }
 );
+
+test('Form test mock', () => {
+    const myMock = jest.fn();
+    myMock('1');
+    myMock('a', 'b');
+    console.log(myMock.mock.calls);
+    expect(myMock.mock.calls.length).toBe(2);
+});

@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import CheckboxControl from '../src/components/shared/checkboxControl';
+import CheckboxControl from '../src/components/shared/CheckboxControl';
 import renderer from 'react-test-renderer';
 
 test('Checkbox test rendering', () => {
