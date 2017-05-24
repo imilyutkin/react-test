@@ -27,18 +27,14 @@ test('Form control render inside', () => {
 
 test('Form control submit testing', () => {
         const onSubmitButtonClick = jest.fn();
+        const preeventDefaultFunc = jest.fn();
         const formControl = shallow(
             <FormControl onSubmit={onSubmitButtonClick} />
         );
-        formControl.find('form').simulate('submit')
+        formControl.find('form').simulate('submit', {
+            preventDefault: preeventDefaultFunc
+        })
         expect(onSubmitButtonClick.mock.calls.length).toBe(1);
+        expect(preeventDefaultFunc.mock.calls.length).toBe(1);
     }
 );
-
-test('Form test mock', () => {
-    const myMock = jest.fn();
-    myMock('1');
-    myMock('a', 'b');
-    console.log(myMock.mock.calls);
-    expect(myMock.mock.calls.length).toBe(2);
-});
